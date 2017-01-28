@@ -1,0 +1,144 @@
+using System;
+
+
+namespace baba
+{
+    class ti
+    {
+        static void Main()
+        {
+            decimal x = decimal.Parse(Console.ReadLine());
+            decimal y = decimal.Parse(Console.ReadLine());
+            string s;
+            decimal m;
+            if (x > y)
+            {
+                if (uint.MinValue <= x && x <= uint.MaxValue)
+                {
+                    if (ushort.MinValue <= x && x <= ushort.MaxValue)
+                    {
+                        if (byte.MinValue <= x && x <= byte.MaxValue)
+                        {
+                            Console.WriteLine("bigger type: byte");
+                            s = "byte";
+                            m = byte.MaxValue;
+                        }
+                        else { Console.WriteLine("bigger type: ushort"); }
+                        s = "ushort";
+                        m = ushort.MaxValue;
+
+                    }
+                    else { Console.WriteLine("bigger type: uint");
+                        s = "uint";
+                        m = uint.MaxValue;
+                    }
+                }
+                else { Console.WriteLine("bigger type: ulong");
+                    s = "ulong";
+                    m = ulong.MaxValue;
+                }
+                Console.WriteLine("{0} can overflow {1} {2} times", x, s, Math.Floor(x/m));
+                //sdfjksdfjkfjksdfhksdfjksfhjkfhksjfhskfjshfjkshfkshfsjkfhskjfhskjfhsdfjkshfkjhsdk
+                if (uint.MinValue <= y && y <= uint.MaxValue)
+                {
+                    if (ushort.MinValue <= y && y <= ushort.MaxValue)
+                    {
+                        if (byte.MinValue <= y && y <= byte.MaxValue)
+                        {
+                            Console.WriteLine("smaller type: byte");
+                            s = "byte";
+                            m = byte.MaxValue;
+                        }
+                        else
+                        {
+                            Console.WriteLine("smaller type: ushort");
+                            s = "ushort";
+                            m = ushort.MaxValue;
+
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("smaller type: uint");
+                        s = "uint";
+                        m = uint.MaxValue;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("smaller type: ulong");
+                    s = "ulong";
+                    m = ulong.MaxValue;
+                }
+                Console.WriteLine("{0} can overflow {1} {2} times", y, s, Math.Floor(y / m));
+            }
+            //asjdahkdakjdhajkdhajkdhkdjahdjkashdjkadhakjdhadjkahdakjdhakjdahkdjahdjkahdajkhdaskjdhakdhakdhajdhakdhasdjkahdkjfrsdfsfsfsdfsdfsfswrwrwrwrwrwrwrwrrwerwrwrwrwrwrwr
+            else {
+                if (uint.MinValue <= x && x <= uint.MaxValue)
+                {
+                    if (ushort.MinValue <= x && x <= ushort.MaxValue)
+                    {
+                        if (byte.MinValue <= x && x <= byte.MaxValue)
+                        {
+                            Console.WriteLine("smaller type: byte");
+                            s = "byte";
+                            m = byte.MaxValue;
+                        }
+                        else { Console.WriteLine("smaller type: ushort"); }
+                        s = "ushort";
+                        m = ushort.MaxValue;
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("smaller type: uint");
+                        s = "uint";
+                        m = uint.MaxValue;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("smaller type: ulong");
+                    s = "ulong";
+                    m = ulong.MaxValue;
+                }
+                Console.WriteLine("{0} can overflow {1} {2} times", x, s, Math.Floor(x / m));
+                //sdfjksdfjkfjksdfhksdfjksfhjkfhksjfhskfjshfjkshfkshfsjkfhskjfhskjfhsdfjkshfkjhsdk
+                if (uint.MinValue <= y && y <= uint.MaxValue)
+                {
+                    if (ushort.MinValue <= y && y <= ushort.MaxValue)
+                    {
+                        if (byte.MinValue <= y && y <= byte.MaxValue)
+                        {
+                            Console.WriteLine("bigger type: byte");
+                            s = "byte";
+                            m = byte.MaxValue;
+                        }
+                        else
+                        {
+                            Console.WriteLine("bigger type: ushort");
+                            s = "ushort";
+                            m = ushort.MaxValue;
+
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("bigger type: uint");
+                        s = "uint";
+                        m = uint.MaxValue;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("bigger type: ulong");
+                    s = "ulong";
+                    m = ulong.MaxValue;
+                }
+                Console.WriteLine("{0} can overflow {1} {2} times", y, s, Math.Floor(y / m));
+            }
+        }
+            }
+        }
+    
+
