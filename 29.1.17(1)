@@ -1,0 +1,17 @@
+using System;
+
+namespace baba
+{
+    class ti
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("CASH RECEIPT");
+            Console.WriteLine("------------------------------");
+            Console.WriteLine("Charged to____________________");
+            Console.WriteLine("Received by___________________");
+            Console.WriteLine("------------------------------");
+            Console.WriteLine("© SoftUni");
+        }
+    }
+}
