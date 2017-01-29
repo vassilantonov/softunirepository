@@ -1,0 +1,19 @@
+using System;
+
+namespace baba
+{
+    class ti
+    {
+        static void Main(string[] args)
+        {
+            var x = int.Parse(Console.ReadLine());
+            var m = int.Parse(Console.ReadLine());
+            var r = 1;
+            for (var i = 0; i < m; i++)
+            {
+                r *= x;
+            }
+            Console.WriteLine(r);
+        }
+    }
+}
