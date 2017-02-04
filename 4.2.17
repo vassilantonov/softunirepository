@@ -1,0 +1,30 @@
+using System;
+
+namespace baba
+{
+    class ti
+    {
+        static void Main()
+        {
+            int input = int.Parse(Console.ReadLine());
+            int lastDigitOfInput;
+            int sumOfOddDigits = 0;
+            int sumOfEvenDigits = 0;
+            input = Math.Abs(input);
+            while (input>0) 
+            {
+                lastDigitOfInput = input % 10;
+                if (lastDigitOfInput % 2 != 0)
+                {
+                    sumOfOddDigits =sumOfOddDigits+lastDigitOfInput;
+                }
+                else
+                {
+                    sumOfEvenDigits =sumOfEvenDigits+lastDigitOfInput;
+                }
+                input = input / 10;
+            }
+            Console.WriteLine(sumOfOddDigits*sumOfEvenDigits);
+        }
+    }
+}
