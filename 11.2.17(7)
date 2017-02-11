@@ -1,0 +1,27 @@
+using System;
+using System.Linq;
+
+namespace baba
+{
+    class ti
+    {
+        static void Main()
+        {
+            string[] arr = Console.ReadLine().Split(' ');
+            int x=0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                var p = arr[i];
+                if (p.Length==1)
+                {
+                    char c = p[0];
+                    if (c>='A' && c<='Z')
+                    {
+                        x++;
+                    }
+                }
+            }
+            Console.WriteLine(x);
+        }
+    }
+}
