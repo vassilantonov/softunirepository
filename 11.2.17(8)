@@ -1,0 +1,34 @@
+using System;
+using System.Linq;
+
+namespace baba
+{
+    class ti
+    {
+        static void Main()
+        {
+            string[] arr = Console.ReadLine().Split(' ');
+            int l=arr.Length;
+            int p = 1;
+            int x = 1;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i]==arr[l-x])
+                {
+                    Console.Write("");
+                }
+                else
+                {
+                    p = 0;
+                    Console.WriteLine("No");
+                    break;
+                }
+                x++;
+            }
+            if (p==1)
+            {
+                Console.WriteLine("Yes");
+            }
+        }
+    }
+}
