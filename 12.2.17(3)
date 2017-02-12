@@ -1,0 +1,40 @@
+using System;
+using System.Linq;
+
+namespace baba
+{
+    class ti
+    {
+        static void Main()
+        {
+            string[] phoneNumber =Console.ReadLine().Split(' ');
+            string[] name = Console.ReadLine().Split(' ');
+            string x = string.Empty;
+            int p = 0;
+            string q = string.Empty;
+            string m = string.Empty;
+            while (x != "done")
+            {
+                x = Console.ReadLine();
+                for (int i = 0; i < name.Length; i++)
+                {
+                    if (x == name[i])
+                    {
+                        q = phoneNumber[i];
+                        m = name[i];
+                        p = 1;
+                        break;
+                    }
+                }
+                if (p == 1)
+                {
+                    if (x == "done")
+                    {
+                        break;
+                    }
+                    Console.WriteLine("{0} -> {1}", m, q);
+                }
+            }
+        }
+    }
+}
