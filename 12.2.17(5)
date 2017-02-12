@@ -1,0 +1,29 @@
+using System;
+using System.Linq;
+
+namespace baba
+{
+    class ti
+    {
+        static void Main()
+        {
+            string text = Console.ReadLine();
+            int[] arrej = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+            string x = string.Empty;
+            int p = 0;
+            for (int i = 0; i < arrej.Length; i++)
+            {
+                if (arrej[i]%2==0)
+                {
+                    p = text[i] - arrej[i];
+                }
+                else
+                {
+                    p = arrej[i] + text[i];
+                }
+                Console.Write((char)p);
+            }
+            Console.WriteLine();
+        }
+    }
+}
