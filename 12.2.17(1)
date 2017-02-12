@@ -1,0 +1,28 @@
+using System;
+using System.Linq;
+
+namespace baba
+{
+    class ti
+    {
+        static void Main()
+        {
+            string[] arrej =Console.ReadLine().Split(' ');
+            string output = string.Empty;
+            int p = 0;
+            for (int i = arrej.Length; i>0; i--)
+            {
+                if (arrej[i - 1] == arrej[i - 2] && arrej[i - 2] == arrej[i - 3])
+                {
+                    output = arrej[i - 1] + " " + arrej[i - 2] + " " + arrej[i - 3];
+                    p = 1;
+                    break;
+                }
+            }
+            if (p==1)
+            {
+                Console.WriteLine(output);
+            }
+        }
+    }
+}
