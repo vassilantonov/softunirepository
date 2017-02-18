@@ -1,0 +1,35 @@
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+namespace baba
+{
+    class ti
+    {
+        static void Main()
+        {
+            var blacklist = Console.ReadLine().Split(' ').ToList();
+            var output = new List<string>();
+            var filename = string.Empty;
+            while (filename != "end")
+            {
+                var c = 0;
+                filename = Console.ReadLine();
+                for (int i = 0; i < blacklist.Count; i++)
+                {
+                    if (filename.Contains(blacklist[i]))
+                    {
+                        c = 1;
+                        break;
+                    }
+                }
+                if (c == 0 && (filename!="end"))
+                {
+                    output.Add(filename);
+                }
+            }
+            output.Sort();
+            Console.WriteLine(string.Join("\n", output));
+        }
+    }
+}
