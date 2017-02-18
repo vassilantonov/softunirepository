@@ -1,0 +1,22 @@
+using System;
+using System.Linq;
+
+namespace baba
+{
+    class ti
+    {
+        static void Main()
+        {
+            var x = Console.ReadLine().Split(' ').ToList();
+            var p = string.Empty;
+            for (int i = 0; i < x.Count; i++)
+            {
+                if (i % 2 == 1)
+                {
+                    p += x[i];
+                }
+            }
+            Console.WriteLine(p);
+        }
+    }
+}
