@@ -1,0 +1,23 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace baba
+{
+    class ti
+    {
+        static void Main()
+        {
+            var x = Console.ReadLine().Split(' ').Select(int.Parse).ToList();
+            var q = new List<int>();
+            foreach (var i in x)
+            {
+                if (!q.Contains(i))
+                {
+                    q.Add(i);
+                }
+            }
+            Console.WriteLine(string.Join(" ", q));
+        }
+    }
+}
