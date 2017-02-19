@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace baba
+{
+    class ti
+    {
+        static void Main()
+        {
+            var numbers = Console.ReadLine().Split(' ').ToList();
+            var number = Console.ReadLine();
+
+            while (number != "end")
+            {
+                var firstDigit = (int)Char.GetNumericValue(number[0]);
+                numbers.Insert(firstDigit, number);
+                number = Console.ReadLine();
+            }
+            Console.WriteLine(string.Join(" ", numbers));
+        }
+
+    }
+}
