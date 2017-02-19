@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace baba
+{
+    class ti
+    {
+        static void Main()
+        {
+            var x = Console.ReadLine().Split(' ').Select(int.Parse).ToList();
+            var q = int.Parse(Console.ReadLine());
+            if (x.Count == q)
+            {
+                Console.Write("already stable: ");
+                Console.WriteLine(string.Join(" ", x));
+            }
+            else
+            {
+                var r = (x.Count - q) / 2;
+                var p = new List<int>();
+                for (int i = r; i < x.Count - r; i++)
+                {
+                    p.Add(x[i]);
+                }
+                Console.WriteLine("{0} rounds", r);
+                Console.WriteLine("remaining: {0}", string.Join(" ", p));
+            }
+        }
+    }
+}
