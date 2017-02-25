@@ -1,0 +1,67 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ExtendedShit
+{
+    public class Program
+    {
+        public static void Main()
+        {
+            var list = new List<int>();
+
+            while (true)
+            {
+                var line = Console.ReadLine();
+                var lastRemoved = 0;
+                string s = line;
+                int result;
+
+                if (int.TryParse(s, out result))
+                {
+                    list.Insert(0, result);
+                }
+
+                else if (line == "bang")
+                {
+
+                    var average = list.Average();
+
+                    for (int i = 0; i < list.Count; i++)
+                    {
+                        if (list[i] <= average)
+                        {
+                            lastRemoved = list[i];
+                            list.Remove(list[i]);
+                            Console.WriteLine($"shot {lastRemoved}");
+
+                            for (int j = 0; j < list.Count; j++)
+                            {
+                                list[j]--;
+                            }
+
+                            break;
+                        }
+                    }
+                }
+                if (list.Count == 0)
+                {
+                    Console.WriteLine($"nobody left to shoot! last one was {lastRemoved}");
+                    break;
+                }
+                if (line == "stop")
+                {
+                    if (list.Count == 0)
+                    {
+                        Console.WriteLine($"you shot them all. last one standing was {lastRemoved}");
+                        break;
+                    }
+                    Console.WriteLine($"survivors: { string.Join(" ", list)}");
+                    break;
+                }
+            }
+        }
+    }
+}
