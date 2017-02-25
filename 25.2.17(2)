@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace baba
+{
+    class ti
+    {
+        static void Main()
+        {
+            string[] arrej =Console.ReadLine().Split(' ').ToArray();
+            var x = 0;
+            var q = 0;
+            char s = '0';
+            var p = string.Empty;
+            for (int i = 0; i < arrej.Length; i++)
+            {
+                p = arrej[i];
+                for (int j = 0; j < p.Length; j++)
+                {
+                    x += p[j];
+                    q++;
+                }
+            }
+            var r = x / q;
+            if (r>=97 && r<=122)
+            {
+                r -= 32;
+                s = Convert.ToChar(r);
+            }
+            else
+            {
+                s = Convert.ToChar(r);
+            }
+            Console.WriteLine(string.Join(s.ToString(), arrej));
+        }
+    }
+}
