@@ -1,0 +1,18 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace baba
+{
+    class ti
+    {
+        static void Main()
+        {
+            var q =Console.ReadLine().ToLower().Split('.', ',', ':', ';', '(', ')', '[', ']', '\"', '\'', '\\', '/', '!', '?', ' ').ToList();
+            var p = q.Distinct().Where(x => x!="").Where(x => x.Length < 5).OrderBy(x => x).ToList();
+            Console.WriteLine(string.Join(", ", p));
+        }
+    }
+}
