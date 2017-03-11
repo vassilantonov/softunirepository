@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace baba
+{
+    class ti
+    {
+        static void Main()
+        {
+            var q = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+            var k = q.Length / 4;
+            var p = q.Take(k).Reverse().ToArray();
+            var r = q.Reverse().Take(k).ToArray();
+            var s = q.Skip(k).Take(2*k).ToArray();
+            var t = p.Concat(r).ToArray();
+            for (int i = 0; i < s.Length; i++)
+            {
+                Console.Write(t[i]+s[i]);
+                Console.Write(" ");
+            }
+        }
+    }
+}
