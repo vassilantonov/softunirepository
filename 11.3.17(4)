@@ -1,0 +1,18 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace baba
+{
+    class ti
+    {
+        static void Main()
+        {
+            var x =Console.ReadLine().Split(' ').Select(int.Parse).ToList();
+            x = x.OrderByDescending(f => f).Take(3).ToList();
+            Console.WriteLine(string.Join(" ", x));
+        }
+    }
+}
