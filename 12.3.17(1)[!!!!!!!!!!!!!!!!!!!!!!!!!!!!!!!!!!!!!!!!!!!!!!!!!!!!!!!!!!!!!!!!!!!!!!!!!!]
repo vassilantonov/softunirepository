@@ -1,33 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _02_Integer_Insertion
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            var numbers = Console.ReadLine().Split(' ').ToList();
-            var number = Console.ReadLine();
-
-            while (number != "end")
-            {
-                var firstDigit = (int)Char.GetNumericValue(number[0]);
-                numbers.Insert(firstDigit, number);
-                number = Console.ReadLine();
-            }
-            Console.WriteLine(string.Join(" ", numbers));
-        }
-
-    }
-}
-11:12AM
-
-using System;
-using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
