@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace baba
+{
+    class ti
+    {
+        static void Main()
+        {
+            var input = Console.ReadLine();
+            var product = string.Empty;
+            var x = input
+                .Split(new string[] { " -> " }, StringSplitOptions.None);
+            while (input != "end")
+            {
+                var sentence = x[0];
+                var placeholders = x[1]
+                    .Split(new string[] { ", " }, StringSplitOptions.None);
+                product = sentence.Replace("{0}", placeholders[0]);
+                for (int i = 1; i < placeholders.Length; i++)
+                {
+                    product = product.Replace("{" + i + "}", placeholders[i]);
+                }
+                Console.WriteLine(product);
+                input = Console.ReadLine();
+                x = input
+                .Split(new string[] { " -> " }, StringSplitOptions.None);
+            }
+        }
+    }
+}
