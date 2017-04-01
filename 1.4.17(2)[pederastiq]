@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace baba
+{
+    class ti
+    {
+        static void Main()
+        {
+            var input = Console.ReadLine();
+            var t = 0;
+            var final = string.Empty;
+            var names = new List<string>();
+            var ages = new List<string>();
+            var grades = new List<string[]>();
+            while (input!="stringify")
+            {
+                var x = input
+                .Split(new string[] { " -> " }, StringSplitOptions.None);
+                var nameAndAge = x[0].Split(new string[] { " : " }, StringSplitOptions.None);
+                var name = nameAndAge[0];
+                var age = nameAndAge[1];
+                var grade = x[1].Split(new string[] { ", " }, StringSplitOptions.None);
+                names.Add(name);
+                ages.Add(age);                
+                grades.Add(grade); 
+                t++;
+                input = Console.ReadLine();
+            }
+            final += ("[");
+            for (int i = 0; i < t; i++)
+            {
+                final += ("{name:\"");
+                final += (names[i]);
+                final += ("\",age:");
+                final += (ages[i]);
+                final += (",grades:[");
+                final += (string.Join(", ", grades[i]));
+                final += ("]}");
+                final += ",";
+            }
+            final += "]";
+            final = final.Remove(final.Length - 2, 1);
+            Console.WriteLine(final);
+        }
+    }
+}
