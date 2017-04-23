@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Configuration;
+using System.Text;
+
+namespace chupu
+{
+    class leipi
+    {
+        static void Main()
+        {
+            var cash = double.Parse(Console.ReadLine());
+            var guests = int.Parse(Console.ReadLine());
+            var priceBanana = double.Parse(Console.ReadLine());
+            var priceEgg = double.Parse(Console.ReadLine());
+            var priceBerry = double.Parse(Console.ReadLine());
+            var sets = 0;
+            if (guests%6==0)
+            {
+                sets = guests / 6;
+            }
+            else
+            {
+                sets = (6 - guests) + guests;
+            }
+            var cost = (priceBanana * 2 + priceEgg * 4 + priceBerry / 5) * sets;
+            if (cost>cash)
+            {
+                Console.WriteLine("Ivancho will have to withdraw money - he will need {0:F2}lv more.", cost-cash);
+            }
+            else
+            {
+                Console.WriteLine("Ivancho has enough money - it would cost {0:F2}lv.", cost);
+            }
+        }
+    }
+}
